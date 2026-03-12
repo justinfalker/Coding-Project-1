@@ -18,9 +18,9 @@ form.addEventListener("input", function (e) {
 });
 
 form.addEventListener("mouseover", function (e) {
-  if (e.target.id === "name") tooltip.textContent = "name";
-  if (e.target.id === "email") tooltip.textContent = "email";
-  if (e.target.id === "comments") tooltip.textContent = "comments";
+  if (e.target.id === "name") tooltip.textContent = "Name";
+  if (e.target.id === "email") tooltip.textContent = "Email";
+  if (e.target.id === "comments") tooltip.textContent = "Comments";
 });
 
 form.addEventListener("mouseout", function (e) {
