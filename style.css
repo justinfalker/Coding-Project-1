@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  max-width: 300px;
+}
+
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+}
+
+#tooltip {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+#nameError,
+#emailError,
+#commentsError {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+#feedback-display {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
