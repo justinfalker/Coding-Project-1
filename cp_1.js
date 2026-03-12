@@ -4,7 +4,7 @@ const tooltip = document.getElementById("tooltip");
 const feedback = document.getElementById("feedback-display");
 
 document.body.addEventListener("click", function () {
-  console.log("background");
+  console.log("Background Click");
 });
 
 form.addEventListener("click", function (e) {
@@ -12,11 +12,9 @@ form.addEventListener("click", function (e) {
 });
 
 form.addEventListener("input", function (e) {
-  if (e.target.id === "comments") {
-    count.textContent = e.target.value.length;
-  }
+  count.textContent = "Characters: " + e.target.value.length;
 });
-
+ 
 form.addEventListener("mouseover", function (e) {
   if (e.target.id === "name") tooltip.textContent = "Name";
   if (e.target.id === "email") tooltip.textContent = "Email";
@@ -55,13 +53,20 @@ form.addEventListener("submit", function (e) {
     valid = false;
   }
 
-  if (valid) {
-    const entry = document.createElement("p");
-    entry.textContent = name + " " + email + " " + comments;
+const entry = document.createElement("div");
 
-    feedback.appendChild(entry);
+const nameLine = document.createElement("p");
+nameLine.textContent = "Name: " + name;
 
-    form.reset();
-    count.textContent = "0";
-  }
+const emailLine = document.createElement("p");
+emailLine.textContent = "Email: " + email;
+
+const commentLine = document.createElement("p");
+commentLine.textContent = "Comments: " + comments;
+
+entry.appendChild(nameLine);
+entry.appendChild(emailLine);
+entry.appendChild(commentLine);
+
+feedback.appendChild(entry);
 });
