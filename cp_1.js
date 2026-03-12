@@ -16,3 +16,15 @@ form.addEventListener("input", function (e) {
     count.textContent = e.target.value.length;
   }
 });
+
+form.addEventListener("mouseover", function (e) {
+  if (e.target.id === "name") tooltip.textContent = "name";
+  if (e.target.id === "email") tooltip.textContent = "email";
+  if (e.target.id === "comments") tooltip.textContent = "comments";
+});
+
+form.addEventListener("mouseout", function (e) {
+  if (e.target.id === "name" || e.target.id === "email" || e.target.id === "comments") {
+    tooltip.textContent = "";
+  }
+});
